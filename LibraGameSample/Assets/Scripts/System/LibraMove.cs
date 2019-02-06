@@ -6,7 +6,9 @@ using DG.Tweening;
 
 public class LibraMove : MonoBehaviour
 {
+    //天秤の腕を動かす角度
     private int rotate = 2;
+    //天秤の皿の移動
     private float MoveSara = 0.1f;
 
     [SerializeField]
@@ -23,11 +25,10 @@ public class LibraMove : MonoBehaviour
         Vector3 Ltmp = LeftKoteigu.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
+    /// <summary>
+    /// DOTweenで腕の動かすモーションをつける
+    /// </summary>
 
     //腕の回転
     public void OnUdeMove()
@@ -38,10 +39,6 @@ public class LibraMove : MonoBehaviour
         ude.transform.DORotate(new Vector3(0f, 0f, rotate), 1.0f);
     }
 
-    public void Even()
-    {
-
-    }
 
     //右の皿の重い時の動き、左の皿の軽い時の動き
     public void RightSaraHeavyMove()
@@ -62,7 +59,5 @@ public class LibraMove : MonoBehaviour
         Vector3 Ltmp = LeftKoteigu.transform.position;
         LeftKoteigu.transform.DOMove(new Vector3(Ltmp.x, Ltmp.y + MoveSara, Ltmp.z), 1.0f);
     }
-
-
 
 }
