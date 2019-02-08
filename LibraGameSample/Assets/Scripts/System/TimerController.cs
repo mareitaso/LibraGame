@@ -17,12 +17,14 @@ public class TimerController : MonoBehaviour
     [SerializeField]
     GameObject time;
     [SerializeField]
-    GameObject answer;
+    GameObject timeUp;
+
+    bool TimeUpEnd = false;
 
     // Use this for initialization
     void Start()
     {
-
+        timeUp.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,16 +48,17 @@ public class TimerController : MonoBehaviour
         if (countTime < 0)
         {
             countTime = 0;
-            this.answer.SetActive(true);
+            timeUp.SetActive(true);
+            TimeUpEnd = true;
+
             //0秒になってから答えが出るまでの間を作る
-
-
         }
         _timeImageView.SizeChange(countTime);
 
-        if (countTime == 0 && Input.GetMouseButtonDown(0))
+        if (TimeUpEnd == true && Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("result");
+            Application.Quit();
+            Debug.Log("おしまい");
         }
         
     }

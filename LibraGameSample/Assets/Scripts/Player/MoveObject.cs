@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
+    [SerializeField]
     bool Nowdrag = false;
 
     //カメラを取得
@@ -14,23 +15,7 @@ public class MoveObject : MonoBehaviour
     
     void OnMouseDrag()
     {
-        if (Nowdrag == true)
-        {
-            if (Input.GetMouseButton(0))
-            {
-                Vector3 objectPointInScreen
-                    = Camera.main.WorldToScreenPoint(this.transform.position);
-
-                Vector3 mousePointInScreen
-                    = new Vector3(Input.mousePosition.x,
-                                  Input.mousePosition.y,
-                                  objectPointInScreen.z);
-
-                Vector3 mousePointInWorld = Camera.main.ScreenToWorldPoint(mousePointInScreen);
-                mousePointInWorld.z = this.transform.position.z;
-                this.transform.position = mousePointInWorld;
-            }
-        }
+        
     }
     
 
@@ -44,6 +29,22 @@ public class MoveObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButton(0))
+        {
+           
+                Vector3 objectPointInScreen
+                    = Camera.main.WorldToScreenPoint(this.transform.position);
+
+                Vector3 mousePointInScreen
+                    = new Vector3(Input.mousePosition.x,
+                                  Input.mousePosition.y,
+                                  objectPointInScreen.z);
+
+                Vector3 mousePointInWorld = Camera.main.ScreenToWorldPoint(mousePointInScreen);
+                mousePointInWorld.z = this.transform.position.z;
+                this.transform.position = mousePointInWorld;
+            
+        }
         /*
         //マウスのポジションを取得してRayに代入
         Ray ray = camera_object.ScreenPointToRay(Input.mousePosition);

@@ -36,10 +36,9 @@ public class LeftSaraController : MonoBehaviour
                 if (check == false)
                 {
                     left_total_weight += 1;
-                    Debug.Log("+1");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L+1");
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
-
                 }
                 break;
 
@@ -47,8 +46,8 @@ public class LeftSaraController : MonoBehaviour
                 if (check == false)
                 {
                     left_total_weight += 2;
-                    Debug.Log("+2");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L+2");
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -57,8 +56,8 @@ public class LeftSaraController : MonoBehaviour
                 if (check == false)
                 {
                     left_total_weight += 3;
-                    Debug.Log("+3");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L+3");
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -68,6 +67,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 4;
                     Debug.Log("+4");
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -77,7 +77,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 5;
                     Debug.Log("+5");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -87,7 +87,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 6;
                     Debug.Log("+6");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -97,7 +97,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 7;
                     Debug.Log("+7");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -107,7 +107,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 8;
                     Debug.Log("+8");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -117,7 +117,7 @@ public class LeftSaraController : MonoBehaviour
                 {
                     left_total_weight += 9;
                     Debug.Log("+9");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L =" + left_total_weight);
                     check = true;
                 }
                 break;
@@ -134,8 +134,8 @@ public class LeftSaraController : MonoBehaviour
                 if (check == true)
                 {
                     left_total_weight -= 1;
-                    Debug.Log("-1");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L-1");
+                    Debug.Log("L =" + left_total_weight);
                     check = false;
                 }
                 break;
@@ -144,8 +144,8 @@ public class LeftSaraController : MonoBehaviour
                 if (check == true)
                 {
                     left_total_weight -= 2;
-                    Debug.Log("-2");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L-2");
+                    Debug.Log("L =" + left_total_weight);
                     check = false;
                 }
                 break;
@@ -154,8 +154,8 @@ public class LeftSaraController : MonoBehaviour
                 if (check == true)
                 {
                     left_total_weight -= 3;
-                    Debug.Log("-3");
-                    Debug.Log(left_total_weight);
+                    Debug.Log("L-3");
+                    Debug.Log("L =" + left_total_weight);
                     check = false;
                 }
                 break;

@@ -16,7 +16,5 @@ public class DateSave : MonoBehaviour
 
         _ssDataControl.SaveData(gamemode, maxmode, gamescore, maxscore);
 
-
-        Application.Quit();
     }
 }

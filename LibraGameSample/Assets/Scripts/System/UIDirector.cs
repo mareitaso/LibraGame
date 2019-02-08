@@ -1,10 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIDirector : MonoBehaviour
 {
+    [SerializeField]
+    GameObject mouse;
+
+    public GameObject choice_Weight = null;
+
     [SerializeField]
     GameObject weight01;
     [SerializeField]
@@ -41,70 +47,81 @@ public class UIDirector : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         //マウスがクリックされたら
-        if (Input.GetMouseButtonDown(0)) 
-        {   
-            //マウスのポジションを取得してRayに代入
-            Ray ray = camera_object.ScreenPointToRay(Input.mousePosition);
-            
-            //マウスのポジションからRayを投げて何かに当たったらhitに入れる
-            if (Physics.Raycast(ray, out hit))  
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+        {
+            UIChange();
+            //Debug.Log(Now);
+        }
+    }
+
+    private void UIChange()
+    {
+        //マウスのポジションを取得してRayに代入
+        Ray subray = new Ray(mouse.transform.position, mouse.transform.position);
+        Ray ray = camera_object.ScreenPointToRay(Input.mousePosition);
+
+        //マウスのポジションからRayを投げて何かに当たったらhitに入れる
+        if (Physics.Raycast(ray, out hit) || Physics.Raycast(subray, out hit))
+        {
+            choice_Weight = hit.collider.gameObject;
+            Debug.Log(choice_Weight);
+
+            //オブジェクト名を取得して変数に入れる
+            string objectName = hit.collider.gameObject.name;
+            switch (objectName)
             {
-                //オブジェクト名を取得して変数に入れる
-                string objectName = hit.collider.gameObject.name; 
-                switch (objectName)
-                {
-                    case "weight01":
-                        AllSetActive();
-                        weight01.SetActive(true);
-                        break;
+                case "weight01":
+                    AllSetActive();
+                    weight01.SetActive(true);
+                    break;
 
-                    case "weight02":
-                        AllSetActive();
-                        weight02.SetActive(true);
-                        break;
+                case "weight02":
+                    AllSetActive();
+                    weight02.SetActive(true);
+                    break;
 
-                    case "weight03":
-                        AllSetActive();
-                        weight03.SetActive(true);
-                        break;
+                case "weight03":
+                    AllSetActive();
+                    weight03.SetActive(true);
+                    break;
 
-                    case "weight04":
-                        AllSetActive();
-                        weight04.SetActive(true);
-                        break;
+                case "weight04":
+                    AllSetActive();
+                    weight04.SetActive(true);
+                    break;
 
-                    case "weight05":
-                        AllSetActive();
-                        weight05.SetActive(true);
-                        break;
+                case "weight05":
+                    AllSetActive();
+                    weight05.SetActive(true);
+                    break;
 
-                    case "weight06":
-                        AllSetActive();
-                        weight06.SetActive(true);
-                        break;
+                case "weight06":
+                    AllSetActive();
+                    weight06.SetActive(true);
+                    break;
 
-                    case "weight07":
-                        AllSetActive();
-                        weight07.SetActive(true);
-                        break;
+                case "weight07":
+                    AllSetActive();
+                    weight07.SetActive(true);
+                    break;
 
-                    case "weight08":
-                        AllSetActive();
-                        weight08.SetActive(true);
-                        break;
+                case "weight08":
+                    AllSetActive();
+                    weight08.SetActive(true);
+                    break;
 
-                    case "weight09":
-                        AllSetActive();
-                        weight09.SetActive(true);
-                        break;
-                }
+                case "weight09":
+                    AllSetActive();
+                    weight09.SetActive(true);
+                    break;
             }
         }
     }
 
-    void AllSetActive()
+
+    private void AllSetActive()
     {
         weight01.SetActive(false);
         weight02.SetActive(false);
@@ -116,5 +133,5 @@ public class UIDirector : MonoBehaviour
         weight08.SetActive(false);
         weight09.SetActive(false);
     }
-    
+
 }

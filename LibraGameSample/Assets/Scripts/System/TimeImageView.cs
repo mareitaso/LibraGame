@@ -10,10 +10,10 @@ public class TimeImageView : MonoBehaviour {
 	public float MaxCount = 0;
 
 	private RectTransform _rectTransform;
-
+    
     [SerializeField]
     public TimerController countTime;
-
+    
     // Use this for initialization
     void Start ()
     {

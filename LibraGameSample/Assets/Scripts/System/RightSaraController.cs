@@ -26,17 +26,17 @@ public class RightSaraController : MonoBehaviour
     }
 
     //当たり判定を使い、重さをプラス
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider collider)
     {
         //分銅のタグで重さ判定
-        switch (gameObject.tag)
+        switch (collider.gameObject.tag)
         {
             case "weight1":
                 if (check == false)
                 {
                     right_total_weight += 1;
-                    Debug.Log("+1");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R+1");
+                    Debug.Log("R ="+right_total_weight);
                     check = true;
                 }
                 break;
@@ -45,8 +45,8 @@ public class RightSaraController : MonoBehaviour
                 if (check == false)
                 {
                     right_total_weight += 2;
-                    Debug.Log("+2");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R+2");
+                    Debug.Log("R =" + right_total_weight);
                     check = true;
                 }
                 
@@ -56,8 +56,8 @@ public class RightSaraController : MonoBehaviour
                 if (check == false)
                 {
                     right_total_weight += 3;
-                    Debug.Log("+3");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R+3");
+                    Debug.Log("R =" + right_total_weight);
                     check = true;
                 }
                 break;
@@ -66,7 +66,7 @@ public class RightSaraController : MonoBehaviour
                 if (check == false)
                 {
                     right_total_weight += 4;
-                    Debug.Log("+4");
+                    Debug.Log("R+4");
                     Debug.Log(right_total_weight);
                     check = true;
                 }
@@ -128,14 +128,14 @@ public class RightSaraController : MonoBehaviour
     private void OnTriggerExit(Collider collider)
     {
         //分銅のタグで重さ判定
-        switch (gameObject.tag)
+        switch (collider.gameObject.tag)
         {
             case "weight1":
                 if (check == true)
                 {
                     right_total_weight -= 1;
-                    Debug.Log("-1");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R-1");
+                    Debug.Log("R =" + right_total_weight);
                     check = false;
                 }
                 break;
@@ -144,8 +144,8 @@ public class RightSaraController : MonoBehaviour
                 if (check == true)
                 {
                     right_total_weight -= 2;
-                    Debug.Log("-2");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R-2");
+                    Debug.Log("R =" + right_total_weight);
                     check = false;
                 }
                 break;
@@ -154,8 +154,8 @@ public class RightSaraController : MonoBehaviour
                 if (check == true)
                 {
                     right_total_weight -= 3;
-                    Debug.Log("-3");
-                    Debug.Log(right_total_weight);
+                    Debug.Log("R-3");
+                    Debug.Log("R =" + right_total_weight);
                     check = false;
                 }
                 break;

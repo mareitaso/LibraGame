@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     void PlayerMouseMove()
     {
-        int Speed = 8;
+        int Speed = 6;
         var xpos = Input.GetAxis("Horizontal");
         var ypos = Input.GetAxis("Vertical");
         var pos = GetComponent<RectTransform>().localPosition;

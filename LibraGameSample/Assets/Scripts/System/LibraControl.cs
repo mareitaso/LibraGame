@@ -23,28 +23,42 @@ public class LibraControl : MonoBehaviour
 
     [SerializeField]
     GameObject Lsara;
+    
 
-    private bool RightSaraHeavyMoveCheck = true;
-    private bool RightSaraLightMoveCheck = true;
+    [HideInInspector]
+    public bool RightSaraHeavyMoveCheck = true;
+    [HideInInspector]
+    public bool RightSaraLightMoveCheck = true;
     //private bool
 
+    void Start()
+    {
+
+    }
 
     void Update()
     {
         /*
-        //タッチされた皿の上にオブジェクトの移動をする
-        if (choiceObject == true&&Input.GetMouseButton(0))
+        switch (gameObject.tag)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-            {
-                float x = Mathf.RoundToInt(hit.point.x);
-                float z = Mathf.RoundToInt(hit.point.z);
-                libra.transform.position = new Vector3(x, hit.transform.position.y + 1.5f, z);
-            }
-        }
-        */
+            case "Sara3":
+                
+                break;
+
+                /*
+                //タッチされた皿の上にオブジェクトの移動をする
+                if (choiceObject == true&&Input.GetMouseButton(0))
+                {
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hit;
+                    if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+                    {
+                        float x = Mathf.RoundToInt(hit.point.x);
+                        float z = Mathf.RoundToInt(hit.point.z);
+                        libra.transform.position = new Vector3(x, hit.transform.position.y + 1.5f, z);
+                    }
+                }
+                */
 
         /*
 
@@ -57,24 +71,27 @@ public class LibraControl : MonoBehaviour
         }
 
     }
-    
 
+
+
+    */
+    }
+    /*
     private void unko()
     {
-        if (righttotalweight < lefttotalweight)
+ 
+        if (right_total_weight == left_total_weight)
         {
             this.director.GetComponent<LibraMove>().RightSaraLightMove();
         }
-        else if (righttotalweight > lefttotalweight)
+        else if (right_total_weight == left_total_weight)
         {
             this.director.GetComponent<LibraMove>().RightSaraHeavyMove();
         }
-        else if (righttotalweight == lefttotalweight)
+        else if (right_total_weight == left_total_weight)
         {
             this.director.GetComponent<LibraMove>().Even();
         }
     }
     */
-    }
-
 }
