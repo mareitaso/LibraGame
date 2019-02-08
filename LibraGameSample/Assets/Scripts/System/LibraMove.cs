@@ -18,6 +18,8 @@ public class LibraMove : MonoBehaviour
     [SerializeField]
     GameObject LeftKoteigu;
 
+
+
     // Use this for initialization
     void Start()
     {
@@ -25,6 +27,7 @@ public class LibraMove : MonoBehaviour
         Vector3 Ltmp = LeftKoteigu.transform.position;
     }
 
+    
 
     /// <summary>
     /// DOTweenで腕の動かすモーションをつける
@@ -39,6 +42,10 @@ public class LibraMove : MonoBehaviour
         ude.transform.DORotate(new Vector3(0f, 0f, rotate), 1.0f);
     }
 
+    public void Even()
+    {
+        ude.transform.DORotate(new Vector3(0, 0, 0), 1.0f);
+    }
 
     //右の皿の重い時の動き、左の皿の軽い時の動き
     public void RightSaraHeavyMove()

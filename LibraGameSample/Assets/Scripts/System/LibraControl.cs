@@ -18,8 +18,15 @@ public class LibraControl : MonoBehaviour
     [SerializeField]
     private int stageTotalWeight;
 
+    [SerializeField]
+    GameObject Rsara;
 
+    [SerializeField]
+    GameObject Lsara;
 
+    private bool RightSaraHeavyMoveCheck = true;
+    private bool RightSaraLightMoveCheck = true;
+    //private bool
 
 
     void Update()
