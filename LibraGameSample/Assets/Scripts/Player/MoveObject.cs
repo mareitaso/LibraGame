@@ -29,7 +29,7 @@ public class MoveObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.GetKeyDown("joystick button 0"))
         {
            
                 Vector3 objectPointInScreen

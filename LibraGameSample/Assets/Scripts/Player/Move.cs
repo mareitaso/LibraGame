@@ -28,17 +28,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AAA();
         weightMove();
-    }
-
-    void AAA()
-    {
-        if (choice_Weight == null)
-        {
-            //choice_Weight.transform.Translate(0, 0, 0);
-            //Debug.Log(choice_Weight);
-        }
     }
 
     private void weightMove()
@@ -57,28 +47,28 @@ public class Move : MonoBehaviour
             switch (HitSara.tag)
             {
                 case "Sara1":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     break;
 
                 case "Sara2":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     break;
 
                 case "Sara3":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     Debug.Log("a");
                     break;
 
                 case "Sara4":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     break;
 
                 case "Sara5":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     break;
 
                 case "Sara6":
-
+                    //choice_Weight.transform.Translate(0, 0, 0);
                     break;
             }
         }

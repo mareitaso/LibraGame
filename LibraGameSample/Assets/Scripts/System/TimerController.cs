@@ -19,6 +19,7 @@ public class TimerController : MonoBehaviour
     [SerializeField]
     GameObject timeUp;
 
+
     bool TimeUpEnd = false;
 
     // Use this for initialization
@@ -64,5 +65,4 @@ public class TimerController : MonoBehaviour
     }
 
 
-    
 }

@@ -49,10 +49,9 @@ public class UIDirector : MonoBehaviour
     void Update()
     {
         //マウスがクリックされたら
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("joystick button 0"))
         {
             UIChange();
-            //Debug.Log(Now);
         }
     }
 

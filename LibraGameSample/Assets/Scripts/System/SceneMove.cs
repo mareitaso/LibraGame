@@ -48,16 +48,5 @@ public class SceneMove : MonoBehaviour
         var rnd = Random.Range(0, hardNumber.Length);
         SceneManager.LoadScene("HardStage" + hardNumber[rnd]);
     }
-
     
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
